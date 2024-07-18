@@ -25,6 +25,7 @@ message CategoryGetRequest {
 
 service CategoryService {
     rpc CreateCategory(CreateCategoryRequest) returns (Category) {}
+    rpc CreateCategoryStream(stream CreateCategoryRequest) returns (CategoryList) {}
     rpc ListCategories(google.protobuf.Empty) returns (CategoryList) {}
     rpc GetCategory(CategoryGetRequest) returns (Category) {}
 }
